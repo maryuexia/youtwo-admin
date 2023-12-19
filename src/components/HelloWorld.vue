@@ -16,7 +16,7 @@ const count = ref(0)
       <code>components/HelloWorld.vue</code> to test HMR
     </p>
   </div>
-  <el-button>我是 ElButton</el-button>
+  <el-button>登录</el-button>
   <p>
     Check out
     <a href="https://vuejs.org/guide/quick-start.html#local" target="_blank"
