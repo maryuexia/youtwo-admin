@@ -21,7 +21,7 @@
           </el-input>
         </el-form-item>
         <el-form-item>
-          <el-button >登录</el-button>
+          <el-button type="primary">登录</el-button>
         </el-form-item>
       </el-form>
     </el-card>
