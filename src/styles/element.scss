@@ -1,13 +1,50 @@
-// styles/element/index.scss
-/* 只需要重写你需要的即可 */
+@use "sass:map";
+//全局主题色
 @forward 'element-plus/theme-chalk/src/common/var.scss' with (
   $colors: (
     'primary': (
-      'base': #303133,
+      //'base': #4364c,
+      'base': #DC3C3A,
     ),
-  ),
+    'success': (
+      'base': #00A85A,
+    ),
+    'warning': (
+      'base': #F6AD55,
+    ),
+    'danger': (
+      'base': #DC3C3A,
+    ),
+  )
 );
+//修改组件样式变量
+:root {
+  --el-box-shadow-light: 0px 0px 8px 0px rgba(0, 91, 173, 0.22);
+  --el-color-primary: #F74023;
 
-// 如果只是按需导入，则可以忽略以下内容。
-// 如果你想导入所有样式:
-// @use "element-plus/theme-chalk/src/index.scss" as *;
+  .el-card {
+    --el-card-border-radius: 8px;
+  }
+
+  .el-table {
+    --el-table-header-bg-color: #0E6EB8;
+    --el-table-header-text-color: #FFFFFF;
+  }
+
+  .el-button--primary, .el-button--primary:active {
+    background: rgba(247, 64, 35, 1);
+    border: none;
+    color: #fff;
+  }
+
+  .el-button--primary:hover, .el-button--primary:focus {
+    background: rgba(247, 64, 35, 0.8);
+    border: none;
+    color: #fff;
+  }
+  .el-button--primary.is-disabled, .el-button--primary.is-disabled:hover, .el-button--primary.is-disabled:focus, .el-button--primary.is-disabled:active {
+    background: rgba(247, 64, 35, 0.5);
+    border: none;
+    color: #fff;
+  }
+}
